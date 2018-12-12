@@ -22,9 +22,9 @@ var server = http.createServer(function(request, response){
   console.log('方方说：含查询字符串的路径\n' + pathWithQuery)
   if(path == '/'){
     response.setHeader('Content-Type', 'text/html;charset=utf-8')
-    response.write('<!DOCTYPE><html><head><link rel="stylesheet" href="/style"></head><body><h1>你好</h1><script src="/script"></script></body></html>')
+    response.write('<!DOCTYPE><html><head><link rel="stylesheet" href="/style"></head><body><h1>你好</h1><script src="/main"></script></body></html>')
     response.end()
-  }else if(path == '/script'){
+  }else if(path == '/main'){
     response.setHeader('Content-Type', 'text/javascript;charset=utf-8')
     response.write('alert("这是JS执行的")')
     response.end()
